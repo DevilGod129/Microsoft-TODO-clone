@@ -1,12 +1,8 @@
 import { createSlice,nanoid } from "@reduxjs/toolkit"; 
-import { act } from "react";
+
 
 const initialState = {
-    id:nanoid(),
-    todos:[],
-    important: false,
-    list_id: nanoid(),
-
+    todos:[],    
 }
 
 export const TodoSlice = createSlice({
@@ -15,11 +11,15 @@ export const TodoSlice = createSlice({
     reducers:{
         // Addding todo to the string
         addTodo: (state,action) => {
+            const {list_id } = action.payload
             const add_new_todo = {
                 todo_id: nanoid(),
                 text: action.payload(),
                 completed: false,
                 subtodo:[],
+                list_id: list_id, // list-id ko path aauxa yesma.......//
+                timestamp: new Date(),
+                important: false,
             }
             state.todos.push(add_new_todo)
         },
@@ -34,6 +34,8 @@ export const TodoSlice = createSlice({
         editTodo: (state,action) => {
             const {id,text} =action.payload
             state.todos = state.todos.map((todo) => todo.id === id ? {...todo,text:text}:todo)
+            state.todos = state.todos.map((todo) => todo.id === id ? {...todo,timestamp:new Date()}:todo)
+
 
         },
 
@@ -48,7 +50,7 @@ export const TodoSlice = createSlice({
 
         importantTodo: (state,action) => {
             const {id}  = action.payload
-            state = state.map((obj) => state.id=== id ? {...state,important:!state.important}: obj)
+            state.todos = state.todos.map((obj) => obj.id=== id ? {...obj,important:!state.important}: obj)
         },
 
         // substeps: 
@@ -78,3 +80,8 @@ export const TodoSlice = createSlice({
 
     }
 })
+
+
+export const {addTodo,editTodo,deleteTodo,add_sub_todo,edit_sub_todo,del_sub_todo,toggleTodo,toggle_sub_todo,importantTodo} = TodoSlice.actions
+
+export default TodoSlice.reducer
