@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+
 import './App.css';
+import Sidebar_left from './Components/Sidebar_1/Sidebar_left';
 
 function App() {
   
 
   return (
-    <div className=''>
-        <h1>MICROSOFT_TODO</h1>
+    <div >
+        <Sidebar_left />
     </div>
   );
 }
