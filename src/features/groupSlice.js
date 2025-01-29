@@ -39,3 +39,6 @@ export const GroupSlice = createSlice({
         }
     }
 })
+
+export const {addGroup,renameGroup,deleteGroup} = GroupSlice.actions
+export default GroupSlice.reducer

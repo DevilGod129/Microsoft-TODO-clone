@@ -14,7 +14,7 @@ const activeSlice =  createSlice({
         },
         
     }
-})
+}) 
 
 export const {setActiveTodo} = activeSlice.actions
 export default activeSlice.reducer
