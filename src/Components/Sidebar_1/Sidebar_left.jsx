@@ -1,10 +1,9 @@
-import { Calendar1Icon, CheckIcon, House, PlusIcon, SidebarIcon, SquareUser, StarIcon, SunIcon } from 'lucide-react'
+import { Calendar1Icon, House, PlusIcon, SidebarIcon, SquareUser, StarIcon, SunIcon } from 'lucide-react'
 import React from 'react'
 
 function Sidebar_left() {
   return (
-   
-<div class="min-h-screen w-sm bg-[#1D2125] px-4 py-3 flex-col flex justify-between ">
+<div class="min-h-screen w-sm bg-[#1D2125] px-4 py-3 flex-col flex justify-between overflow-auto overscroll-contain ">
   <div>
   <div class="flex min-h-15 pb-8 ">
     {/* <!-- Circle --> */}
