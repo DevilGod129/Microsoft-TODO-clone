@@ -1,4 +1,4 @@
-import { Calendar1Icon, House, PlusIcon, SidebarIcon, SquareUser, StarIcon, SunIcon } from 'lucide-react'
+import { Calendar1Icon, House, PlusIcon, SidebarIcon, SquareUser, StarIcon, SunIcon,Search } from 'lucide-react'
 import React from 'react'
 
 function Sidebar_left() {
@@ -17,12 +17,23 @@ function Sidebar_left() {
 
   <div class="min-h-fit   gap-5  ">
 
+    {/* Search Button.... */}
+  {/* <div className="relative mb-6">
+        <input
+          type="text"
+          placeholder="Search"
+          className="w-full bg-gray-800 text-white rounded-md py-2 pl-8 pr-4 outline-none"
+        />
+        <Search className="w-4 h-4 text-gray-400 absolute left-2 top-3" />
+      </div> */}
 
 <SidebarLeftItem title={"My Day"} icon={<SunIcon className='text-white size-4' />}/>
 <SidebarLeftItem title={"Important"} icon={<StarIcon className='text-pink-400 size-4' />}/>
 <SidebarLeftItem title={"Planned"} icon={<Calendar1Icon className='text-green-400 size-4' />}/>
 <SidebarLeftItem title={"Assigned to me"} icon={<SquareUser className='text-green-500 size-4' />}/>
-<SidebarLeftItem title={"Tasks"} icon={<House className='text-gray-400 size-4' />}/>
+<SidebarLeftItem title={"Tasks"} icon={<House className='text-gray-400 size-4' />} Tasks={<div className="ml-auto flex items-center justify-center w-6 h-6 rounded-full bg-[#3c444c] text-white text-sm">
+              3
+            </div>}/>
 
 
      
@@ -51,12 +62,14 @@ export default Sidebar_left
 
 
 
-const SidebarLeftItem = ({icon,title}) => {
+const SidebarLeftItem = ({icon,title,Tasks}) => {
   return (
-    <div class="flex hover:bg-[#3c444c] mb-3 hover:rounded-md p-2 items-center">
+    <div class="flex hover:bg-[#3c444c] mb-3 hover:rounded-md p-2 items-center ">
 {icon}    <div class="text-white px-4  ">
       {title}
     </div>
+      {/* <span className="ml-auto text-sm rounded-full bg-[#3c444c] h-3 w-3 px-2 py-2 text-white ">{num}</span> */}
+      {Tasks}
   </div>
   )
 }

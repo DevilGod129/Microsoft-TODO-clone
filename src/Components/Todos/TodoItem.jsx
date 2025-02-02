@@ -1,76 +1,36 @@
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 
-// const TodoItem = () => {
- 
+const TodoItem = () => {
+  const [checked, setChecked] = useState(false);
+  const [starred, setStarred] = useState(false);
 
-//   return (
-    // <div className="group flex items-center justify-between w-full p-3 bg-gray-900/90 hover:bg-gray-800/90 rounded-lg mb-1">
-    //   <div className="flex items-center gap-3">
-    //     {/* Circular Checkbox */}
-    //     <button
-    //       // onClick={handleCheckboxClick}
-    //       className="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center
-    //           hover:border-gray-400"
-    //     >
-    //       {/* {isChecked && (
-    //         <svg 
-    //           className="w-3 h-3 text-white" 
-    //           fill="none" 
-    //           stroke="currentColor" 
-    //           viewBox="0 0 24 24"
-    //         >
-    //           <path 
-    //             strokeLinecap="round" 
-    //             strokeLinejoin="round" 
-    //             strokeWidth="2.5" 
-    //             d="M5 13l4 4L19 7"
-    //           />
-    //         </svg>
-    //       )} */}
-    //     </button>
-        
-    //     {/* Text Content */}
-    //     <div className="flex flex-col">
-    //       <span className={`text-gray-200 text-sm font-medium `}>
-    //         Text
-    //       </span>
-    //       {/* {count !== undefined && total !== undefined && (
-    //         <span className="text-gray-500 text-xs">Letter</span>
-    //       )} */}
-    //     </div>
-    //   </div>
-
-    //   {/* Important Star Button */}
-    //   <button
-    //     // onClick={handleStarClick}
-    //     // className={`transition-colors ${
-    //     //   isImportant 
-    //     //     ? 'text-yellow-400 hover:text-yellow-500' 
-    //     //     : 'text-gray-600 hover:text-gray-300'
-    //     // }`}
-    //     className='text-gray-600 hover:text-gray-300'
-    //   >
-    //     <Star 
-    //       size={18} 
-    //       fill='currentColor'
-    //     />
-    //   </button>
-    // </div>
-
-  
-//   );
-// };
-
-
-
-function TodoItem() {
   return (
-    <div className="group flex items-center justify-between w-screen p-3 bg-gray-900/90 hover:bg-gray-800/90 rounded-lg mb-1">
+    
+      <div className="bg-black/80 backdrop-blur-sm rounded-lg px-4 py-3 flex items-center gap-3">
+        <div 
+          className="flex items-center justify-center w-5 h-5 rounded-full border border-white/30 cursor-pointer hover:bg-white/10"
+          onClick={() => setChecked(!checked)}
+        >
+          {checked && (
+            <div className="w-3 h-3 bg-white rounded-full" />
+          )}
+        </div>
+        
+        <span className="flex-1 text-white/90">
+          hello
+        </span>
+        
+        <Star
+          size={20}
+          className={`cursor-pointer transition-colors ${
+            starred ? 'fill-white text-white' : 'text-white/30 hover:text-white/50'
+          }`}
+          onClick={() => setStarred(!starred)}
+        />
+      </div>
+    
+  );
+};
 
-    </div>
-  )
-}
-
-export default TodoItem
-e
+export default TodoItem;
