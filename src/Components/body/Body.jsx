@@ -8,7 +8,7 @@ function Body() {
 
 
   return (
-  <div class="flex-1 bg-slate-800 min-h-screen">
+  <div class="flex-1 bg-[url(https://i.imgur.com/EDjOfUE.png)] bg-fixed bg-cover min-h-screen  ">
       <header className="p-4 flex items-center justify-between text-white">
         <div className="flex items-center gap-3">
           <Home className="w-6 h-6" />
@@ -24,7 +24,7 @@ function Body() {
         <TodoItem />
       </div>
       
-      <div className='center'>
+      <div className='px-4 space-y-1 mb-24'>
       <TodoForm />
       </div>
 </div>
