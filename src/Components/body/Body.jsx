@@ -8,7 +8,7 @@ function Body() {
 
 
   return (
-  <div class="flex-1 bg-[url(https://i.imgur.com/EDjOfUE.png)] bg-fixed bg-cover min-h-screen  ">
+  <div class="relative flex-1 bg-[url(https://i.imgur.com/EDjOfUE.png)]  bg-cover h-full  ">
       <header className="p-4 flex items-center justify-between text-white">
         <div className="flex items-center gap-3">
           <Home className="w-6 h-6" />
@@ -20,11 +20,11 @@ function Body() {
         </div>
       </header>
 
-      <div className="px-4 space-y-1 mb-24">
+      <div className="  px-4 space-y-1">
         <TodoItem />
       </div>
       
-      <div className='px-4 space-y-1 mb-24'>
+      <div className='absolute bottom-20 px-4 space-y-1  w-full'>
       <TodoForm />
       </div>
 </div>

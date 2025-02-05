@@ -1,6 +1,5 @@
 
 import { useSelector } from 'react-redux';
-import './App.css';
 import Body from './Components/Body/Body';
 import Sidebar_left from './Components/Sidebar_1/Sidebar_left';
 import Sidebarhidden from './Components/sidebar_hidden/Sidebarhidden';
@@ -9,10 +8,10 @@ import Sidebarhidden from './Components/sidebar_hidden/Sidebarhidden';
 function App() {
   const { visible } = useSelector((state) => state)
   return (
-    <div className='flex overflow-hidden overscroll-contain' >
+    <div className='flex h-screen w-full' >
       <Sidebar_left />
-      {/* <Body/> */}
-      <Body />
+      <Body/>
+      {/* <Body /> */}
       {/* <TodoForm  className="justify-center"/>
         {/* <TodoItem className="w-fit"/> */}
       <Sidebarhidden />
