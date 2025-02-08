@@ -3,7 +3,7 @@ import React from 'react'
 
 function Sidebar_left() {
   return (
-<div class="h-full w-sm bg-[#1D2125] px-4 py-3 flex-col flex justify-between ">
+<div class="h-full w-auto bg-[#1D2125] px-4 py-3 flex-col flex justify-between ">
   <div>
   <div class="flex min-h-15 pb-8 ">
     {/* <!-- Circle --> */}

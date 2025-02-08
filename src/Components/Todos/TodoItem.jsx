@@ -13,7 +13,7 @@ const TodoItem = () => {
 
   return (
     
-      <div className="bg-[#2D2F2F] backdrop-blur-sm rounded-lg px-4 py-3 flex items-center gap-3">
+      <div className="bg-[#2D2F2F] hover:bg-[#3a3e3e] backdrop-blur-sm rounded-lg px-4 py-3 flex items-center gap-3">
         <div 
           className="flex items-center justify-center w-5 h-5 rounded-full border border-white/30 cursor-pointer hover:bg-white/10"
           onClick={() => setChecked(!checked)}

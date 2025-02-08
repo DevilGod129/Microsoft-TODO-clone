@@ -9,10 +9,10 @@ function Body() {
 
   return (
   <div class="relative flex-1 bg-[url(https://i.imgur.com/EDjOfUE.png)]  bg-cover h-full  ">
-      <header className="p-4 flex items-center justify-between text-white">
+      <header className="p-6 flex items-center justify-between text-white">
         <div className="flex items-center gap-3">
           <Home className="w-6 h-6" />
-          <h1 className="text-xl font-semibold">Tasks</h1>
+          <h1 className="text-3xl font-semibold">Tasks</h1>
         </div>
         <div className="flex items-center gap-4">
           <ImageIcon className="w-5 h-5" />
