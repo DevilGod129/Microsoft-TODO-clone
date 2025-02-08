@@ -1,7 +1,10 @@
 import { Calendar1Icon, House, PlusIcon, SidebarIcon, SquareUser, StarIcon, SunIcon,Search } from 'lucide-react'
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { addList } from '../../features/listSlice'
 
 function Sidebar_left() {
+  // const dispatch = useDispatch()
   return (
 <div class="h-full w-auto bg-[#1D2125] px-4 py-3 flex-col flex justify-between ">
   <div>
@@ -27,7 +30,7 @@ function Sidebar_left() {
         <Search className="w-4 h-4 text-gray-400 absolute left-2 top-3" />
       </div> */}
 
-<SidebarLeftItem title={"My Day"} icon={<SunIcon className='text-white size-4' />}/>
+<SidebarLeftItem title={"My Day"} icon={<SunIcon className='text-white size-4'  />}/>
 <SidebarLeftItem title={"Important"} icon={<StarIcon className='text-pink-400 size-4' />}/>
 <SidebarLeftItem title={"Planned"} icon={<Calendar1Icon className='text-green-400 size-4' />}/>
 <SidebarLeftItem title={"Assigned to me"} icon={<SquareUser className='text-green-500 size-4' />}/>
@@ -45,7 +48,7 @@ function Sidebar_left() {
   </div>
   
   <div class="text-white w-full flex min-h-5 flex-row  justify-between items-center gap-2 ">
-    <div class="flex hover:bg-gray-700 w-full p-2 rounded-lg">
+    <div class="flex hover:bg-gray-700 w-full p-2 rounded-lg" >
   <PlusIcon/>
 <span>New List</span>
     </div>

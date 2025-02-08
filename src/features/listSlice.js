@@ -1,9 +1,5 @@
 import { createSlice,nanoid } from "@reduxjs/toolkit"; 
 
-
-
-
-
 const initialState = {
     lists:[],
     background_url: '',
@@ -18,7 +14,7 @@ export const listSlice = createSlice({
         addList: (state,action) => {
             const {group_id} =action.payload
 
-            const new_id = availableIds[0];
+            const new_id = state.availableIds[0];
             state.availableIds = state.availableIds.filter((num) => num!== new_id)
 
             

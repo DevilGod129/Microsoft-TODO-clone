@@ -2,17 +2,30 @@ import React, { useState } from 'react';
 import { Home, ImageIcon, MoreHorizontal } from 'lucide-react';
 import TodoItem from '../todos/TodoItem';
 import TodoForm from '../todos/TodoForm';
+import { iconNames } from 'lucide-react/dynamic';
 
 
 function Body() {
 
 
   return (
-  <div class="relative flex-1 bg-[url(https://i.imgur.com/EDjOfUE.png)]  bg-cover h-full  ">
+    <div class="relative flex-1 bg-[url(https://i.imgur.com/EDjOfUE.png)]  bg-cover h-full  ">
+    <BodyItem icon={ <Home className="w-6 h-6" />} title={'Tasks'}/>
+    </div>
+  )
+}
+
+export default Body
+
+const BodyItem = ({icon,title}) => {
+  return(
+    <>
+    
       <header className="p-6 flex items-center justify-between text-white">
         <div className="flex items-center gap-3">
-          <Home className="w-6 h-6" />
-          <h1 className="text-3xl font-semibold">Tasks</h1>
+          {/* <Home className="w-6 h-6" /> */}
+          {icon}
+          <h1 className="text-3xl font-semibold">{title}</h1>
         </div>
         <div className="flex items-center gap-4">
           <ImageIcon className="w-5 h-5" />
@@ -27,8 +40,6 @@ function Body() {
       <div className='absolute bottom-20 px-4 space-y-1  w-full'>
       <TodoForm />
       </div>
-</div>
+      </>
   )
 }
-
-export default Body
