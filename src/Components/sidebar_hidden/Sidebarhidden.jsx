@@ -7,7 +7,7 @@ function Sidebarhidden() {
   const [starred, setStarred] = useState(false);
 
   return (
-    <div class="h-screen w-80 bg-[#1D2125] px-3 py-15  flex flex-col justify-between ">
+    <div class="h-screen w-70 bg-[#1D2125] px-3 py-15  flex flex-col justify-between ">
         <div className=' h- w-full bg-[#3a3e3e] overflow-hidden'>
           {/* First row */}
           <div className='p-3 rounded-lg flex gap-3 backdrop-blur-sm  items-center'>

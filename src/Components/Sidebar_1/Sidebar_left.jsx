@@ -6,7 +6,7 @@ import { addGroup } from '../../features/groupSlice'
 
 function Sidebar_left() {
   const dispatch = useDispatch()
-  let groups= useSelector(state => state.Group.groups)
+  let group= useSelector(state => state.Group.groups)
   return (
 <div class="h-full w-auto bg-[#1D2125] px-4 py-3 flex-col flex justify-between ">
   <div>
@@ -46,7 +46,9 @@ function Sidebar_left() {
 
     {/* Here new groups will be added.... */}
     {
-
+      // group.map((group) => (
+        
+      // ))
     }
 
   </div>
