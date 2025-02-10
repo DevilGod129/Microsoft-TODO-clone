@@ -6,12 +6,12 @@ const initialState = {
 }
 
 export const GroupSlice = createSlice({
-    name:'group',
+    name:'Group',
     initialState,
     reducers: {
         // add new group.........
-        addGroup: (state,action) => {
-            const new_id = availableIds[0];
+        addGroup: (state) => {
+            const new_id = state.availableIds[0];
             state.availableIds = state.availableIds.filter((num) => num!== new_id)
 
             const add_new_group = {

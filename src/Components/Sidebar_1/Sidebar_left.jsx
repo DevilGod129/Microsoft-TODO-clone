@@ -1,10 +1,12 @@
 import { Calendar1Icon, House, PlusIcon, SidebarIcon, SquareUser, StarIcon, SunIcon,Search } from 'lucide-react'
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addList } from '../../features/listSlice'
+import { addGroup } from '../../features/groupSlice'
 
 function Sidebar_left() {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
+  let groups= useSelector(state => state.Group.groups)
   return (
 <div class="h-full w-auto bg-[#1D2125] px-4 py-3 flex-col flex justify-between ">
   <div>
@@ -43,6 +45,9 @@ function Sidebar_left() {
     <hr class=" h-0.25 w-full  bg-gray-200 border-0 dark:bg-gray-600" />
 
     {/* Here new groups will be added.... */}
+    {
+
+    }
 
   </div>
   </div>
@@ -52,7 +57,7 @@ function Sidebar_left() {
   <PlusIcon/>
 <span>New List</span>
     </div>
-    <div className='hover:bg-gray-700 flex p-2 rounded-lg'>
+    <div className='hover:bg-gray-700 flex p-2 rounded-lg' onClick={() => dispatch(addGroup())}>
    <SidebarIcon />
     </div>
 
